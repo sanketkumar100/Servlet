@@ -14,6 +14,7 @@ public class FirstServlet extends HttpServlet {
 
         // Get user input
         String username = req.getParameter("username");
+        ck.setMaxAge(60 * 60); // cookie valid for 1 hour
 
         // Create a cookie with key-value
         Cookie ck = new Cookie("user", username);
